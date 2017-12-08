@@ -61,13 +61,6 @@ IF lv_delta_month MOD 12 > 6."
   lv_delta_year = lv_delta_year + 1.
 ENDIF.
 
-*    IF ( lv_incpetion_date+4(2) - p_bdate+4(2) > 6 )  OR ( ( lv_incpetion_date+4(2) -  p_bdate+4(2) = 6  )
-*      AND ( lv_incpetion_date+6(2) >= p_bdate+6(2) ) ).
-*      lv_inception_year = lv_incpetion_date+0(4) - p_bdate+0(4) + 1.
-*    ELSE.
-*      lv_inception_year = lv_incpetion_date+0(4) - p_bdate+0(4).
-*    ENDIF.
-
 IF p_cdate+4(4) >=  lv_incpetion_date+4(4).
   gv_age = p_cdate+0(4) - lv_incpetion_date+0(4) + lv_delta_year .
 ELSE.
